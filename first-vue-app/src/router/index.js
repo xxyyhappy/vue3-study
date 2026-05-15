@@ -43,6 +43,7 @@ import AdvComponentsDemo from "../pages/AdvComponentsDemo.vue";
 import TemplateSyntaxDemo from "../pages/TemplateSyntaxDemo.vue";
 import ReactiveDataDemo from "../pages/ReactiveDataDemo.vue";
 import ComponentBasicsDemo from "../pages/ComponentBasicsDemo.vue";
+import ComposablesDemo from "../pages/ComposablesDemo.vue";
 
 // Pinia Store —— 在路由守卫中也能直接使用
 import { useAuthStore } from "../stores/auth.js";
@@ -167,6 +168,12 @@ const routes = [
     name: "component-basics",
     component: ComponentBasicsDemo,
     meta: { title: "组件化开发" },
+  },
+  {
+    path: "/composables",
+    name: "composables",
+    component: ComposablesDemo,
+    meta: { title: "组合式函数" },
   },
 
   // ===== 嵌套路由（重点！） =====

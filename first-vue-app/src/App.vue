@@ -18,21 +18,25 @@
       <router-link to="/user-center" class="nav-linkh">用户中心</router-link>
       <!-- 登录页入口（编程式导航演示） -->
       <router-link to="/login" class="nav-linkh">登录</router-link>
+      <router-link to="/reactive-data" class="nav-linkh"
+        >响应式数据</router-link
+      >
+      <router-link to="/template-syntax" class="nav-linkh"
+        >模板语法</router-link
+      >
+    </nav>
+    <nav class="navv">
       <!-- 路由模式演示 -->
       <router-link to="/route-mode" class="nav-linkh">路由模式</router-link>
       <!-- 路由守卫演示 -->
       <router-link to="/guard-demo" class="nav-linkh">路由守卫</router-link>
       <router-link to="/pinia-demo" class="nav-linkh">Pinia</router-link>
       <router-link to="/adv-components" class="nav-linkh">组件进阶</router-link>
-      <router-link to="/template-syntax" class="nav-linkh"
-        >模板语法</router-link
-      >
-      <router-link to="/reactive-data" class="nav-linkh"
-        >响应式数据</router-link
-      >
+
       <router-link to="/component-basics" class="nav-linkh"
         >组件基础</router-link
       >
+      <router-link to="/composables" class="nav-linkh">组合式函数</router-link>
     </nav>
 
     <!-- === 页面显示区域 === -->
@@ -68,6 +72,15 @@ h2 {
 }
 
 .navh {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.navv {
   display: flex;
   gap: 20px;
   justify-content: center;
