@@ -44,6 +44,8 @@ import TemplateSyntaxDemo from "../pages/TemplateSyntaxDemo.vue";
 import ReactiveDataDemo from "../pages/ReactiveDataDemo.vue";
 import ComponentBasicsDemo from "../pages/ComponentBasicsDemo.vue";
 import ComposablesDemo from "../pages/ComposablesDemo.vue";
+import ProvideInjectDemo from "../pages/ProvideInjectDemo.vue";
+import CustomDirectivesDemo from "../pages/CustomDirectivesDemo.vue";
 
 // Pinia Store —— 在路由守卫中也能直接使用
 import { useAuthStore } from "../stores/auth.js";
@@ -174,6 +176,19 @@ const routes = [
     name: "composables",
     component: ComposablesDemo,
     meta: { title: "组合式函数" },
+  },
+  {
+    path: "/provide-inject",
+    name: "provide-inject",
+    component: ProvideInjectDemo,
+    meta: { title: "Provide / Inject" },
+  },
+  {
+    // 自定义指令演示页
+    path: "/custom-directives",
+    name: "custom-directives",
+    component: CustomDirectivesDemo,
+    meta: { title: "自定义指令" },
   },
 
   // ===== 嵌套路由（重点！） =====

@@ -10,28 +10,30 @@
 
     <!-- 用户信息表 -->
     <table class="info-table">
-      <tr>
-        <td class="label">头像</td>
-        <td>
-          <div class="avatar">👤</div>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">昵称</td>
-        <td>小明同学</td>
-      </tr>
-      <tr>
-        <td class="label">邮箱</td>
-        <td>xiaoming@example.com</td>
-      </tr>
-      <tr>
-        <td class="label">手机</td>
-        <td>138****8888</td>
-      </tr>
-      <tr>
-        <td class="label">注册时间</td>
-        <td>2026-01-15</td>
-      </tr>
+      <tbody>
+        <tr>
+          <td class="label">头像</td>
+          <td>
+            <div class="avatar">👤</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="label">昵称</td>
+          <td>小明同学</td>
+        </tr>
+        <tr>
+          <td class="label">邮箱</td>
+          <td>xiaoming@example.com</td>
+        </tr>
+        <tr>
+          <td class="label">手机</td>
+          <td>138****8888</td>
+        </tr>
+        <tr>
+          <td class="label">注册时间</td>
+          <td>2026-01-15</td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </template>

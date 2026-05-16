@@ -24,12 +24,13 @@
 
       <div class="analogy">
         <div class="analogy-text">
-          <p><strong>大白话</strong>：状态管理就像商场的<strong>公共储物柜</strong>。</p>
+          <p>
+            <strong>大白话</strong
+            >：状态管理就像商场的<strong>公共储物柜</strong>。
+          </p>
           <ul>
             <li>你买完东西（某个组件产生的数据）→ 存到储物柜（Store）</li>
-            <li>
-              你老公要用（另一个组件需要数据）→ 去同一个储物柜取
-            </li>
+            <li>你老公要用（另一个组件需要数据）→ 去同一个储物柜取</li>
             <li>你退掉东西（修改数据）→ 储物柜自动更新，大家都看到最新状态</li>
           </ul>
           <p class="highlight">
@@ -45,7 +46,9 @@
     <!-- ============================================ -->
     <div class="compare-card">
       <h2>手写方案 vs Pinia 方案</h2>
-      <p class="compare-hint">以之前写的 useAuth.js 为例，看看用了 Pinia 有什么区别</p>
+      <p class="compare-hint">
+        以之前写的 useAuth.js 为例，看看用了 Pinia 有什么区别
+      </p>
 
       <div class="compare-row">
         <div class="compare-side">
@@ -68,7 +71,8 @@ export function useAuth() {
 }
 
 // 4. 路由里要单独导入 user
-import { user } from './useAuth.js'</pre>
+import { user } from './useAuth.js'</pre
+          >
         </div>
 
         <div class="compare-vs">
@@ -90,17 +94,30 @@ export const useAuthStore = defineStore('auth', () => {
 
 // 2. 路由里直接 useAuthStore()
 //    不需要额外导出！
-import { useAuthStore } from './stores/auth'</pre>
+import { useAuthStore } from './stores/auth'</pre
+          >
         </div>
       </div>
 
       <div class="compare-summary">
         <p><strong>Pinia 的核心优势：</strong></p>
         <ol>
-          <li><strong>统一 API</strong> —— 组件和路由都用 <code>useXxxStore()</code>，不再需要"额外导出"</li>
-          <li><strong>DevTools 支持</strong> —— 可以查看、修改、时间旅行调试所有 state</li>
-          <li><strong>类型推断</strong> —— TypeScript 项目里自动推导类型，不用手写接口</li>
-          <li><strong>模块化</strong> —— 每个 Store 一个文件，按功能拆分，不像 vuex 那样要 mutations</li>
+          <li>
+            <strong>统一 API</strong> —— 组件和路由都用
+            <code>useXxxStore()</code>，不再需要"额外导出"
+          </li>
+          <li>
+            <strong>DevTools 支持</strong> —— 可以查看、修改、时间旅行调试所有
+            state
+          </li>
+          <li>
+            <strong>类型推断</strong> —— TypeScript
+            项目里自动推导类型，不用手写接口
+          </li>
+          <li>
+            <strong>模块化</strong> —— 每个 Store 一个文件，按功能拆分，不像
+            vuex 那样要 mutations
+          </li>
         </ol>
       </div>
     </div>
@@ -112,30 +129,34 @@ import { useAuthStore } from './stores/auth'</pre>
       <h2>Pinia 的三个核心</h2>
 
       <table class="core-table">
-        <tr>
-          <th>概念</th>
-          <th>对应 Vue</th>
-          <th>大白话</th>
-          <th>注意</th>
-        </tr>
-        <tr>
-          <td><span class="tag-state">State 状态</span></td>
-          <td><code>ref()</code></td>
-          <td>数据存在哪（储物格里的东西）</td>
-          <td>直接修改：<code>store.count++</code></td>
-        </tr>
-        <tr>
-          <td><span class="tag-getter">Getter 计算属性</span></td>
-          <td><code>computed()</code></td>
-          <td>数据怎么变形（标签上写的编号）</td>
-          <td>自动缓存，依赖不变就不重算</td>
-        </tr>
-        <tr>
-          <td><span class="tag-action">Action 动作</span></td>
-          <td><code>function()</code></td>
-          <td>怎么改数据（存/取东西的操作）</td>
-          <td>普通函数，可异步（async/await）</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>概念</th>
+            <th>对应 Vue</th>
+            <th>大白话</th>
+            <th>注意</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag-state">State 状态</span></td>
+            <td><code>ref()</code></td>
+            <td>数据存在哪（储物格里的东西）</td>
+            <td>直接修改：<code>store.count++</code></td>
+          </tr>
+          <tr>
+            <td><span class="tag-getter">Getter 计算属性</span></td>
+            <td><code>computed()</code></td>
+            <td>数据怎么变形（标签上写的编号）</td>
+            <td>自动缓存，依赖不变就不重算</td>
+          </tr>
+          <tr>
+            <td><span class="tag-action">Action 动作</span></td>
+            <td><code>function()</code></td>
+            <td>怎么改数据（存/取东西的操作）</td>
+            <td>普通函数，可异步（async/await）</td>
+          </tr>
+        </tbody>
       </table>
     </div>
 
@@ -158,9 +179,15 @@ import { useAuthStore } from './stores/auth'</pre>
         </div>
 
         <div class="counter-buttons">
-          <button @click="counter.decrement" class="btn-counter btn-minus">−</button>
-          <button @click="counter.increment" class="btn-counter btn-plus">+</button>
-          <button @click="counter.reset" class="btn-counter btn-reset">重置</button>
+          <button @click="counter.decrement" class="btn-counter btn-minus">
+            −
+          </button>
+          <button @click="counter.increment" class="btn-counter btn-plus">
+            +
+          </button>
+          <button @click="counter.reset" class="btn-counter btn-reset">
+            重置
+          </button>
         </div>
 
         <div class="counter-input">
@@ -184,7 +211,8 @@ export const useCounterStore = defineStore('counter', () => {
   function reset() { count.value = 0 }
 
   return { count, double, increment, decrement, reset }
-})</pre>
+})</pre
+          >
         </div>
       </div>
     </div>
@@ -195,10 +223,16 @@ export const useCounterStore = defineStore('counter', () => {
     <div class="auth-demo-card">
       <h2>🔐 Auth Store —— 管理登录状态</h2>
 
-      <div class="auth-status" :class="authStore.isLoggedIn ? 'logged-in' : 'logged-out'">
+      <div
+        class="auth-status"
+        :class="authStore.isLoggedIn ? 'logged-in' : 'logged-out'"
+      >
         <div class="auth-status-header">
-          <span class="auth-badge" :class="authStore.isLoggedIn ? 'badge-in' : 'badge-out'">
-            {{ authStore.isLoggedIn ? '✅ 已登录' : '❌ 未登录' }}
+          <span
+            class="auth-badge"
+            :class="authStore.isLoggedIn ? 'badge-in' : 'badge-out'"
+          >
+            {{ authStore.isLoggedIn ? "✅ 已登录" : "❌ 未登录" }}
           </span>
           <span class="auth-user" v-if="authStore.isLoggedIn">
             用户：<strong>{{ authStore.username }}</strong>
@@ -210,7 +244,9 @@ export const useCounterStore = defineStore('counter', () => {
             <input v-model="loginName" placeholder="输入用户名" />
             <button @click="handleLogin" class="btn-login-sm">登录</button>
           </div>
-          <button v-else @click="handleLogout" class="btn-logout-sm">退出登录</button>
+          <button v-else @click="handleLogout" class="btn-logout-sm">
+            退出登录
+          </button>
         </div>
       </div>
 
@@ -230,7 +266,8 @@ export function useAuth() {
 
 // 路由里：
 import { user } from './useAuth'
-// ↑ 要在守卫里访问 user.value</pre>
+// ↑ 要在守卫里访问 user.value</pre
+            >
           </div>
           <div class="code-side">
             <h4>✅ Pinia 统一调用</h4>
@@ -244,7 +281,8 @@ const authStore = useAuthStore()
 authStore.isLoggedIn  // ✅ 一样！
 
 // 不需要额外导出 ref！
-// 不需要两种导入方式！</pre>
+// 不需要两种导入方式！</pre
+            >
           </div>
         </div>
       </div>
@@ -271,13 +309,22 @@ router.beforeEach((to, from) => {
     // 没登录 → 重定向
     return { name: 'login', query: { redirect: to.fullPath } }
   }
-})</pre>
+})</pre
+      >
 
       <div class="key-point">
         <p><strong>💡 关键区别</strong></p>
-        <p>之前手写方案需要在 useAuth.js 里多导出一个 <code>user</code> ref，</p>
-        <p>因为路由守卫里<strong>不能</strong>调用 <code>useAuth()</code>（会报错）。</p>
-        <p>用了 Pinia 之后，<code>useAuthStore()</code> 在<strong>任何地方都能用</strong>！</p>
+        <p>
+          之前手写方案需要在 useAuth.js 里多导出一个 <code>user</code> ref，
+        </p>
+        <p>
+          因为路由守卫里<strong>不能</strong>调用
+          <code>useAuth()</code>（会报错）。
+        </p>
+        <p>
+          用了 Pinia 之后，<code>useAuthStore()</code>
+          在<strong>任何地方都能用</strong>！
+        </p>
       </div>
     </div>
 
@@ -289,26 +336,30 @@ router.beforeEach((to, from) => {
       <p>安装 Vue DevTools 浏览器扩展后，可以看到 Pinia 的完整状态：</p>
 
       <table class="devtools-table">
-        <tr>
-          <th>功能</th>
-          <th>说明</th>
-        </tr>
-        <tr>
-          <td>查看 State</td>
-          <td>实时看到所有 Store 的当前数据</td>
-        </tr>
-        <tr>
-          <td>修改 State</td>
-          <td>直接在 DevTools 里改值，页面实时更新</td>
-        </tr>
-        <tr>
-          <td>时间旅行</td>
-          <td>回退到某个操作之前，观察状态变化</td>
-        </tr>
-        <tr>
-          <td>追踪 Action</td>
-          <td>看到每次 action 调用、谁调用的、传了什么参</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>功能</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>查看 State</td>
+            <td>实时看到所有 Store 的当前数据</td>
+          </tr>
+          <tr>
+            <td>修改 State</td>
+            <td>直接在 DevTools 里改值，页面实时更新</td>
+          </tr>
+          <tr>
+            <td>时间旅行</td>
+            <td>回退到某个操作之前，观察状态变化</td>
+          </tr>
+          <tr>
+            <td>追踪 Action</td>
+            <td>看到每次 action 调用、谁调用的、传了什么参</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
@@ -381,7 +432,9 @@ h1 {
 .concept-card {
   border: 2px solid #42b883;
 }
-.concept-card h2 { color: #42b883; }
+.concept-card h2 {
+  color: #42b883;
+}
 
 .analogy ul {
   padding-left: 20px;
@@ -406,7 +459,9 @@ h1 {
 .compare-card {
   border: 2px solid #e67e22;
 }
-.compare-card h2 { color: #e67e22; }
+.compare-card h2 {
+  color: #e67e22;
+}
 
 .compare-hint {
   font-size: 14px;
@@ -484,7 +539,9 @@ h1 {
 .core-card {
   border: 2px solid #3498db;
 }
-.core-card h2 { color: #3498db; }
+.core-card h2 {
+  color: #3498db;
+}
 
 .core-table {
   width: 100%;
@@ -507,7 +564,9 @@ h1 {
   font-size: 14px;
 }
 
-.core-table code { font-size: 13px; }
+.core-table code {
+  font-size: 13px;
+}
 
 .tag-state {
   display: inline-block;
@@ -540,7 +599,9 @@ h1 {
 .demo-card {
   border: 2px solid #9b59b6;
 }
-.demo-card h2 { color: #9b59b6; }
+.demo-card h2 {
+  color: #9b59b6;
+}
 
 .counter-box {
   background: white;
@@ -667,7 +728,9 @@ h1 {
 .auth-demo-card {
   border: 2px solid #e74c3c;
 }
-.auth-demo-card h2 { color: #e74c3c; }
+.auth-demo-card h2 {
+  color: #e74c3c;
+}
 
 .auth-status {
   padding: 20px;
@@ -738,7 +801,9 @@ h1 {
   font-size: 14px;
 }
 
-.btn-login-sm:hover { background: #3aa876; }
+.btn-login-sm:hover {
+  background: #3aa876;
+}
 
 .btn-logout-sm {
   padding: 10px 25px;
@@ -750,7 +815,9 @@ h1 {
   font-size: 14px;
 }
 
-.btn-logout-sm:hover { background: #c0392b; }
+.btn-logout-sm:hover {
+  background: #c0392b;
+}
 
 /* 代码对比 */
 .code-compare h3 {
@@ -788,7 +855,9 @@ h1 {
 .router-card {
   border: 2px solid #2c3e50;
 }
-.router-card h2 { color: #2c3e50; }
+.router-card h2 {
+  color: #2c3e50;
+}
 
 .router-hint {
   font-size: 14px;
@@ -810,7 +879,9 @@ h1 {
 .devtools-card {
   border: 2px solid #2ecc71;
 }
-.devtools-card h2 { color: #2ecc71; }
+.devtools-card h2 {
+  color: #2ecc71;
+}
 
 .devtools-table {
   width: 100%;

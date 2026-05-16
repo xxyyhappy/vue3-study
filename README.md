@@ -251,7 +251,7 @@ npm run preview
 
 MIT 许可证
 
-版权所有 (c) 2026 qq303812912
+版权所有 (c) 2026 qq303812918
 项目开源地址：https://gitee.com/qq303812918/vue3-study.git
 
 特此免费授予任何获得本软件及相关文档文件副本的人，

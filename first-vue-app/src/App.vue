@@ -37,6 +37,12 @@
         >组件基础</router-link
       >
       <router-link to="/composables" class="nav-linkh">组合式函数</router-link>
+      <router-link to="/provide-inject" class="nav-linkh"
+        >Provide/Inject</router-link
+      >
+      <router-link to="/custom-directives" class="nav-linkh"
+        >自定义指令</router-link
+      >
     </nav>
 
     <!-- === 页面显示区域 === -->

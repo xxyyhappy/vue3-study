@@ -24,7 +24,9 @@ const username = useLocalStorage("username", "");
 const message = useLocalStorage("message", "");
 const resetfny = () => {
   resetLocalStorage("username", "");
+  resetLocalStorage("message", "");
   username.value = "";
+  message.value = "";
   console.log("移除");
 };
 

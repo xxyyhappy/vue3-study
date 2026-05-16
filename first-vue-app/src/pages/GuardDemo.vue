@@ -48,26 +48,30 @@ router.beforeEach((to) =&gt; {
     <div class="types-card">
       <h2>三种路由守卫</h2>
       <table class="types-table">
-        <tr>
-          <th>类型</th>
-          <th>写法</th>
-          <th>作用</th>
-        </tr>
-        <tr>
-          <td><span class="tag-green">全局前置守卫</span></td>
-          <td><code>router.beforeEach()</code></td>
-          <td>每次跳转前执行 —— 最常用！能拦截</td>
-        </tr>
-        <tr>
-          <td><span class="tag-blue">全局后置钩子</span></td>
-          <td><code>router.afterEach()</code></td>
-          <td>跳转完成后执行 —— 不能拦截，用来改标题、记日志</td>
-        </tr>
-        <tr>
-          <td><span class="tag-orange">路由独享守卫</span></td>
-          <td><code>beforeEnter</code></td>
-          <td>写在某个路由上，只有访问这个路由时触发</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>类型</th>
+            <th>写法</th>
+            <th>作用</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tag-green">全局前置守卫</span></td>
+            <td><code>router.beforeEach()</code></td>
+            <td>每次跳转前执行 —— 最常用！能拦截</td>
+          </tr>
+          <tr>
+            <td><span class="tag-blue">全局后置钩子</span></td>
+            <td><code>router.afterEach()</code></td>
+            <td>跳转完成后执行 —— 不能拦截，用来改标题、记日志</td>
+          </tr>
+          <tr>
+            <td><span class="tag-orange">路由独享守卫</span></td>
+            <td><code>beforeEnter</code></td>
+            <td>写在某个路由上，只有访问这个路由时触发</td>
+          </tr>
+        </tbody>
       </table>
     </div>
 
@@ -108,20 +112,24 @@ router.beforeEach((to) =&gt; {
     <div class="routes-card">
       <h2>路由权限一览</h2>
       <table class="routes-table">
-        <tr>
-          <th>路径</th>
-          <th>需要登录？</th>
-          <th>说明</th>
-        </tr>
-        <tr v-for="rt in routeList" :key="rt.path">
-          <td><code>{{ rt.path }}</code></td>
-          <td>
-            <span :class="rt.auth ? 'tag-yes' : 'tag-no'">
-              {{ rt.auth ? '是' : '否' }}
-            </span>
-          </td>
-          <td class="route-desc">{{ rt.desc }}</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>路径</th>
+            <th>需要登录？</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="rt in routeList" :key="rt.path">
+            <td><code>{{ rt.path }}</code></td>
+            <td>
+              <span :class="rt.auth ? 'tag-yes' : 'tag-no'">
+                {{ rt.auth ? '是' : '否' }}
+              </span>
+            </td>
+            <td class="route-desc">{{ rt.desc }}</td>
+          </tr>
+        </tbody>
       </table>
     </div>
 

@@ -18,7 +18,10 @@ import 'element-plus/dist/index.css'
 // 1. 引入路由配置
 import router from './router/index.js'
 
-// 2. 创建 Vue 应用实例
+// 2. 引入全局指令
+import { registerDirectives } from './directives/index.js'
+
+// 3. 创建 Vue 应用实例
 const app = createApp(App)
 
 // 3. 注册 Pinia（状态管理）
@@ -30,5 +33,8 @@ app.use(pinia)
 app.use(router)
 app.use(ElementPlus)
 
-// 5. 挂载到页面
+// 5. 注册全局自定义指令
+registerDirectives(app)
+
+// 6. 挂载到页面
 app.mount('#app')

@@ -51,24 +51,28 @@
     <div class="explain-card">
       <h2>push vs replace 的区别</h2>
       <table class="compare-table">
-        <tr>
-          <th>方法</th>
-          <th>效果</th>
-          <th>能后退吗？</th>
-          <th>适用场景</th>
-        </tr>
-        <tr>
-          <td>router.push()</td>
-          <td>添加一条新的历史记录</td>
-          <td>✅ 能后退</td>
-          <td>普通跳转（大部分场景）</td>
-        </tr>
-        <tr>
-          <td>router.replace()</td>
-          <td>替换当前历史记录</td>
-          <td>❌ 不能后退</td>
-          <td>登录后不应该回到登录页</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>方法</th>
+            <th>效果</th>
+            <th>能后退吗？</th>
+            <th>适用场景</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>router.push()</td>
+            <td>添加一条新的历史记录</td>
+            <td>✅ 能后退</td>
+            <td>普通跳转（大部分场景）</td>
+          </tr>
+          <tr>
+            <td>router.replace()</td>
+            <td>替换当前历史记录</td>
+            <td>❌ 不能后退</td>
+            <td>登录后不应该回到登录页</td>
+          </tr>
+        </tbody>
       </table>
       <p class="tip">
         💡 登录后用 replace 跳转：这样点"后退"不会回到登录页（更安全）
